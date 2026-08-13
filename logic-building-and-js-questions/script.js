@@ -1,0 +1,45 @@
+// logics buliding questions and js practice questions
+
+// QUESTION 1: var vs let scope
+
+console.log(a);
+var a = 5;
+console.log(b);
+let b = 10;
+
+// QUESTION 2. Write a block where var leaks out but let doesn't. Prove it with console.log.
+
+{
+  var x = 5;
+  let y = 10;
+}
+console.log(x); // var leaks out of the block, so this will log 5
+console.log(y); // let does not leak out of the block so this will throw a ReferenceError: y is not defined
+
+// QUESTION 3. What's the output and why
+
+console.log(1 + "2"); // "12" number 1 is converted to string and concatenated with "2"
+console.log("5" - 3); // 2 "5" is converted to the number 5, then 3 is subtracted
+console.log(true + 1); // 2 true is converted to the number 1, then added to 1
+console.log(null + 1); // 1 null is converted to the number 0, then 1 is added
+console.log(undefined + 1); // NaN undefined is converted to the number NaN, then added to 1
+
+// QUESTION 4. What's the difference between == and ===? Write one example where they give different outputs.
+
+// == checks for equal value but not type while === checks both value and type.
+
+console.log(5 == "5"); // true
+console.log(5 === "5"); // false
+
+// QUESTION 5. What does typeof null return and why is it considered a bug?
+
+// typeof null returns "object". This is considered a bug because null is not an object, but a primitive value that represents the absence of any object value.
+
+// QUESTION 6. What's the output:
+
+console.log(2 ** 10); // 1024 2 raised to the power of 10
+console.log(10 % 3); // 1 10 divided by 3 leaves a remainder of 1
+console.log(+"42"); // 42 the unary plus operator converts the string "42" to a number
+console.log(+true); // 1 the unary plus operator converts the boolean true to the number 1
+console.log(+false); // 0 the unary plus operator converts the boolean false to the number 0
+console.log(+null); // 0 the unary plus operator converts null to the number 0
