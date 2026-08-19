@@ -86,3 +86,60 @@ function getRps(user, computer){
   return `${computer} Computer won`;
 }
 console.log(getRps("Rock", 234));
+
+
+// QUESTION 9. Write a function getSignal(color) that:
+// - "Red" → "Stop"
+// - "Yellow" → "Get Ready"
+// - "Green" → "Go"
+// - Anything else → "Invalid signal"
+
+
+function getSignal(color){
+  if(color === "Red") return "stop";
+  if(color === "Yellow") return "Get Ready";
+  if(color === "Green") return "Go";
+  return "Invalid signal"
+}
+console.log(getSignal("Red"));
+
+
+// QUESTION 10. Write a function getBMI(weight, height) that:
+// - Calculates BMI = weight / (height * height)
+// - Below 18.5 → "Underweight"
+// - 18.5 to 24.9 → "Normal"
+// - 25 to 29.9 → "Overweight"
+// - 30 and above → "Obese"
+// - Negative values → "Invalid input"
+
+
+function getBMI(weight, height){
+  if(weight<=0 || height<=0) return "Invalid input";
+  let BMI = weight / (height*height);
+    if(BMI>=30) return `${BMI} Obese`;
+    if(BMI>=25) return `${BMI} Overweight`;
+    if(BMI>=18.5) return `${BMI} Normal`;
+    return `${BMI} Underweight`;
+}
+
+console.log(getBMI(50, 1.71));
+
+
+
+// QUESTION 11. Write a function getAgeGroup(age) that:
+// - 0-12 → "Child"
+// - 13-17 → "Teenager"
+// - 18-64 → "Adult"
+// - 65 and above → "Senior"
+// - Negative → "Invalid age"
+
+
+function getAgeGroup(age){
+  if(age<0) return "Invalid age";
+  if(age>=65) return "Senior";
+  if(age>=18) return "Adult";
+  if(age>=13) return "Teenager";
+  if(age>=0) return "Child";
+}
+
+console.log(getAgeGroup(-10));
