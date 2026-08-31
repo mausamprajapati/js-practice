@@ -1,13 +1,11 @@
 // logics buliding questions and js practice questions
 
-
 // QUESTION 1: var vs let scope
 
 console.log(a);
 var a = 5;
 console.log(b);
 let b = 10;
-
 
 // QUESTION 2. Write a block where var leaks out but let doesn't. Prove it with console.log.
 
@@ -18,7 +16,6 @@ let b = 10;
 console.log(x); // var leaks out of the block, so this will log 5
 console.log(y); // let does not leak out of the block so this will throw a ReferenceError: y is not defined
 
-
 // QUESTION 3. What's the output and why
 
 console.log(1 + "2"); // "12" number 1 is converted to string and concatenated with "2"
@@ -27,7 +24,6 @@ console.log(true + 1); // 2 true is converted to the number 1, then added to 1
 console.log(null + 1); // 1 null is converted to the number 0, then 1 is added
 console.log(undefined + 1); // NaN undefined is converted to the number NaN, then added to 1
 
-
 // QUESTION 4. What's the difference between == and ===? Write one example where they give different outputs.
 
 // == checks for equal value but not type while === checks both value and type.
@@ -35,11 +31,9 @@ console.log(undefined + 1); // NaN undefined is converted to the number NaN, the
 console.log(5 == "5"); // true
 console.log(5 === "5"); // false
 
-
 // QUESTION 5. What does typeof null return and why is it considered a bug?
 
 // typeof null returns "object". This is considered a bug because null is not an object, but a primitive value that represents the absence of any object value.
-
 
 // QUESTION 6. What's the output:
 
@@ -50,15 +44,14 @@ console.log(+true);  // 1 the unary plus operator converts the boolean true to t
 console.log(+false);  // 0 the unary plus operator converts the boolean false to the number 0
 console.log(+null);  // 0 the unary plus operator converts null to the number 0
 
-
 // QUESTION 7. Write a function getGrade(score) that:
-//   - Takes a student's marks (0 to 100) 
+//   - Takes a student's marks (0 to 100)
 //   - Returns the grade based on this logic:
 //   90-100 A+
 //   80-89 A
-//   70-79 B 
-//   60-69 C 
-//   33-59 D 
+//   70-79 B
+//   60-69 C
+//   33-59 D
 //   0-32 Fail
 //   Anything else Invalid marks
 
@@ -73,7 +66,6 @@ function getGrade(score){
 }
 console.log(getGrade(2));
 
-
 // QUESTION 8. Rock-Paper-Scissors logic
 
 function getRps(user, computer){
@@ -87,13 +79,11 @@ function getRps(user, computer){
 }
 console.log(getRps("Rock", 234));
 
-
 // QUESTION 9. Write a function getSignal(color) that:
 // - "Red" → "Stop"
 // - "Yellow" → "Get Ready"
 // - "Green" → "Go"
 // - Anything else → "Invalid signal"
-
 
 function getSignal(color){
   if(color === "Red") return "stop";
@@ -103,7 +93,6 @@ function getSignal(color){
 }
 console.log(getSignal("Red"));
 
-
 // QUESTION 10. Write a function getBMI(weight, height) that:
 // - Calculates BMI = weight / (height * height)
 // - Below 18.5 → "Underweight"
@@ -111,7 +100,6 @@ console.log(getSignal("Red"));
 // - 25 to 29.9 → "Overweight"
 // - 30 and above → "Obese"
 // - Negative values → "Invalid input"
-
 
 function getBMI(weight, height){
   if(weight<=0 || height<=0) return "Invalid input";
@@ -124,15 +112,12 @@ function getBMI(weight, height){
 
 console.log(getBMI(50, 1.71));
 
-
-
 // QUESTION 11. Write a function getAgeGroup(age) that:
 // - 0-12 → "Child"
 // - 13-17 → "Teenager"
 // - 18-64 → "Adult"
 // - 65 and above → "Senior"
 // - Negative → "Invalid age"
-
 
 function getAgeGroup(age){
   if(age<0) return "Invalid age";
@@ -143,3 +128,116 @@ function getAgeGroup(age){
 }
 
 console.log(getAgeGroup(-10));
+
+// QUESTION 12. Print numbers from 1 to 10 using for loop.
+
+for(let i=1; i<=10; i++){
+  console.log(i);
+}
+
+// QUESTION 13. Print numbers form 10 to 1 using while loop.
+{
+  let i=10;
+  while(i>=1){
+    console.log(i);
+    i--;
+  }
+}
+
+// QUESTION 14. Print even numbers from 1 to 20 using for loop.
+
+for(let i=1; i<=20; i++){
+  if(i%2 === 0){
+    console.log(i);
+  }
+}
+
+// QUESTION 15. Print odd numbers from 1 to 15 using while loop.
+{
+  let x = 1;
+  while(x<=15){
+    if(x%2 !== 0){
+      console.log(x);
+    }
+    x++;
+  }
+}
+
+// QUESTION 16. Print the multiplication table of 5.
+
+for(let i=1; i<=10; i++){
+  console.log(`5 x ${i} = ${5*i}`);
+}
+
+// QUESTION 17. Find the sum of numbers from 1 to 100 using a loop.
+
+let sum = 0;
+for(let i=1; i<=100; i++){
+  sum = sum + i;
+}
+console.log(sum);
+
+// QUESTION 18. Print all numbers between 1 to 50 that are divisible by 3.
+
+for(let i=1; i<=50; i++){
+  if(i%3 === 0){
+    console.log(i);
+  }
+}
+
+// QUESTION 19. Ask the user for a number and print whether each number from 1 to that number is even or odd.
+{
+  let num = +prompt("Please enter a number");
+  function oddEve(num){
+    if(isNaN(num) || num<=0) return "Invalid Input ? Please enter a valid number";
+
+    for(let i = 1; i<=num; i++){
+      if(i % 2 === 0) {
+        console.log(`${i} is even`);
+      }else{
+        console.log(`${i} is odd`);
+      }
+
+    }
+  }
+  oddEve(num);
+}
+                                                      // or
+
+let num = +prompt("Please enter a number");
+
+for (let i = 1; i <= num; i++) {
+  if (i % 2 === 0) {
+    console.log(`${i} is even`);
+  } else {
+    console.log(`${i} is odd`);
+  }
+}
+
+
+
+// QUESTION 20. Ask the user for a number and print whether that number is even or odd.
+
+{
+  let num = +prompt("Please enter a number");
+  function eveOdd(num){
+    if(isNaN(num)) return "Invalid Input";
+    if(num % 2 === 0){
+      console.log(`${num} is even`);
+    }else {
+      console.log(`${num} is odd`);
+    }
+  }
+  eveOdd(num);
+}
+
+
+// QUESTION 21. Count how many numbers between 1 to 100 are divisible by both 3 and 5.
+
+let count = 0;
+for(let i = 1; i<=100; i++){
+  if(i % 3 === 0 && i % 5 === 0){
+    count++;
+  }
+}
+console.log(`${count}`);
