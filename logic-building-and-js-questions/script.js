@@ -241,3 +241,27 @@ for(let i = 1; i<=100; i++){
   }
 }
 console.log(`${count}`);
+
+
+// Question 22. Write a loop from 1 100 that:
+// . Print each number
+// . Stops completely when it finds the first number divisible by 7.
+
+for(let i = 1; i <= 100; i++){
+  if(i % 7 === 0){
+    break;
+  }
+  console.log(i);
+}
+
+
+// QUESTION 23. Write a loop from 1 to 20 that:
+// . Skips numbers divisible by 3
+// . Prints all others
+
+for(let i = 1; i <= 20; i++){
+  if(i % 3 === 0){
+    continue;
+  }
+  console.log(i);
+}
