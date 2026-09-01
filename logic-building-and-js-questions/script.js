@@ -319,7 +319,7 @@ for(let i = 1; i <= 50; i++){
 
 
 
-// QUESTION 27. Q27. Calculate the factorial of a number
+// QUESTION 27. Calculate the factorial of a number
 
 {
   let val = +prompt("Enter a number");
@@ -332,4 +332,42 @@ for(let i = 1; i <= 50; i++){
     sum = sum * i;
   }
   console.log(sum);
+}
+
+
+
+// QUESTION 28. Print a countdown from a given number to 0
+
+for(let i = 10; i >=0; i--){
+  console.log(i);
+  if(i === 0 ){
+    console.log("Blast off");
+  };
+}
+
+
+// QUESTION 29. Sum of all odd numbers between 1 and 200
+
+{
+  let sum = 0;
+  for(let i = 1; i <= 200; i++){
+    if(i % 2 !== 0){
+      sum = sum + i;
+    }
+  }
+  console.log(sum);
+}
+
+
+// QUESTION 30. Find how many numbers containing digit 3 between 1 and 100
+
+{
+  let count = 0;
+  for(let i = 1; i <= 100; i++){
+    let str = String(i);
+    if(str.includes("3")){
+      count++;
+    }
+  }
+  console.log(count);
 }
