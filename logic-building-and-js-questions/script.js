@@ -282,3 +282,53 @@ for(let i = 1; i <= 20; i++){
     
   }
 }
+
+
+// QUESTION 25. Print numbers 1 to 50:
+// - Divisible by 3 → print "Fizz"
+// - Divisible by 5 → print "Buzz"  
+// - Divisible by both → print "FizzBuzz"
+// - Otherwise → print the number
+
+for(let i = 1; i <= 50; i++){
+  if(i % 3 === 0 && i % 5 === 0){
+    console.log("FizzBuzz");
+  } else if( i % 3 === 0){
+    console.log("Fizz");
+  } else if(i % 5 === 0){
+    console.log("Buzz");
+  } else{
+    console.log(`${i}`);
+  }
+  
+}
+
+
+// QUESTION 26. Find the first number greater than 50 that is divisible by 9
+
+{
+  let i = 1;
+  while(i <= 100){
+    if(i % 9 === 0 && i>50){
+      console.log(`${i}`);
+      break;
+    }
+    i++;
+  }
+}
+
+
+// QUESTION 27. Q27. Calculate the factorial of a number
+
+{
+  let val = +prompt("Enter a number");
+  let sum = 1;
+
+  if(isNaN(val)){
+    console.log("Please enter valid number");
+  };
+  for(let i = val; i >= 1; i--){
+    sum = sum * i;
+  }
+  console.log(sum);
+}
