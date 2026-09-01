@@ -318,6 +318,7 @@ for(let i = 1; i <= 50; i++){
 }
 
 
+
 // QUESTION 27. Q27. Calculate the factorial of a number
 
 {
