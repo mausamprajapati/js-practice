@@ -265,3 +265,20 @@ for(let i = 1; i <= 20; i++){
   }
   console.log(i);
 }
+
+
+// QUESTION 24. Write a loop from 1 to 100 that:
+// . Prints only 5 odd numbers
+// . Then stops the loop
+
+{
+  let count = 0;
+  for(let i = 1; i <= 100; i++){
+    if(i % 2 !== 0){
+      console.log(i);
+      count++;
+      if(count === 5) break;
+    }
+    
+  }
+}
