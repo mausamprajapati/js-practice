@@ -373,12 +373,42 @@ for(let i = 10; i >=0; i--){
 }
 
 
-// QUESTION 31. Keep asking number still user enter an even number 
+// QUESTION 31. Ask user’s age and check if eligible to vote If age >= 18 → “Eligible”, else → “Not eligible”
+
+{
+  let age = +prompt("Enter your age");
+  if(age <= 17){
+    console.log(`${age} you are not eligible vote`);
+  }else if(isNaN(age)){
+    console.log("Please Enter your correct age");
+  }else{
+    console.log(`${age} you are eligible for vote `);
+  };
+}
 
 
-  let inp;
-  do{
-    inp = +prompt("Please enter an even number");
-  }while(inp % 2 !== 0);
-    console.log(`${inp}`);
-  
+// QUESTION 32. Count how many numbers between 1 and 15 are greater than 8
+
+{
+  let count = 0;
+  for(let i = 1; i <= 15; i++){
+    if(i > 8){
+      count++;
+    }
+  }
+  console.log(count);
+}
+
+
+// QUESTION 33. Ask user for password and print access status Hardcoded correct password. Compare with user input.
+
+
+{
+  let userinput = prompt("Enter Password");
+  let password = "password";
+  if(userinput !== password){
+    console.log("Wrong Password");
+  }else{
+    console.log("Access granted");
+  }
+}
