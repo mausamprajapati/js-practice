@@ -371,3 +371,14 @@ for(let i = 10; i >=0; i--){
   }
   console.log(count);
 }
+
+
+// QUESTION 31. Keep asking number still user enter an even number 
+
+
+  let inp;
+  do{
+    inp = +prompt("Please enter an even number");
+  }while(inp % 2 !== 0);
+    console.log(`${inp}`);
+  
