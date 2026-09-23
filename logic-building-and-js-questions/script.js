@@ -380,7 +380,7 @@ for(let i = 10; i >=0; i--){
   if(age <= 17){
     console.log(`${age} you are not eligible vote`);
   }else if(isNaN(age)){
-    console.log("Please Enter your correct age");
+    console.error("Please Enter your correct age");
   }else{
     console.log(`${age} you are eligible for vote `);
   };
@@ -407,7 +407,7 @@ for(let i = 10; i >=0; i--){
   let userinput = prompt("Enter Password");
   let password = "password";
   if(userinput !== password){
-    console.log("Wrong Password");
+    console.error("Wrong Password");
   }else{
     console.log("Access granted");
   }
