@@ -377,10 +377,10 @@ for(let i = 10; i >=0; i--){
 
 {
   let age = +prompt("Enter your age");
-  if(age <= 17){
-    console.log(`${age} you are not eligible vote`);
-  }else if(isNaN(age)){
+  if(isNaN(age)){
     console.error("Please Enter your correct age");
+  }else if(age <= 17){
+    console.log(`${age} you are not eligible vote`);
   }else{
     console.log(`${age} you are eligible for vote `);
   };
@@ -411,4 +411,26 @@ for(let i = 10; i >=0; i--){
   }else{
     console.log("Access granted");
   }
+}
+ 
+
+// QUESTION 34. Allow only 3 attempts to enter correct password. If user get it right early, stop. If not "Account locked".
+
+
+{
+  let password = "password";
+  let count = 0;
+
+  let user = prompt("Enter password");
+  count++;
+
+  while(user !== password){
+    if(count === 3){
+      console.error("Account Locked");
+      break;
+    }
+    count++;
+    user = prompt("Enter password");
+  }
+  if(user === password) console.log("Access Granted");
 }
