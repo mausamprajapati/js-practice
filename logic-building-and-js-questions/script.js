@@ -434,3 +434,34 @@ for(let i = 10; i >=0; i--){
   }
   if(user === password) console.log("Access Granted");
 }
+
+
+// QUESTION 35. Ask user for words until they type “stop”. Count how many times they typed “yes” Loop until "stop" is typed. Count "yes".
+
+
+{
+  let count = 0;
+  let user = prompt("Enter any word");
+
+  while(user !== "stop"){
+    if(user === "yes"){
+      count++;
+    }
+    user = prompt("Enter any word");
+  }
+  console.log(`You typed "yes" ${count} times`);
+
+}
+
+
+
+// QUESTION 36. Print numbers divisible by 7 from 1 to 50 Use modulo % and loop.
+
+
+{
+  for(let i = 1; i <= 50; i++){
+    if(i % 7 ===   0){
+      console.log(i);
+    }
+  }
+}
