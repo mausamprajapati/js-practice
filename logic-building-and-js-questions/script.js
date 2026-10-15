@@ -429,8 +429,8 @@ for(let i = 10; i >=0; i--){
       console.error("Account Locked");
       break;
     }
-    count++;
     user = prompt("Enter password");
+    count++;
   }
   if(user === password) console.log("Access Granted");
 }
