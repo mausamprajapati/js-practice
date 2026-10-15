@@ -465,3 +465,51 @@ for(let i = 10; i >=0; i--){
     }
   }
 }
+
+
+
+// QUESTION 37. Sum of all odd numbers from 1 to 30 . Add only odd numbers. Print final sum.
+
+
+{
+  let sum = 0;
+  for(let i = 1; i <= 30; i++){
+    if(i % 2 !== 0){
+      sum = sum + i;
+    }
+  }
+  console.log(`Total sum of odd number from 1 to 30 is ${sum}`);
+}
+
+
+
+// QUESTION 38. Keep asking number until user enters an even number. use while loop. stop only if input is even.
+
+
+{
+  let user = +prompt("Enter a number");
+
+  while(user % 2 !== 0){
+    user = +prompt("Enter a number");
+  }
+  
+  console.log(`${user} is even. loop stopped.`);
+}
+
+
+// QUESTION 39. Print numbers between two users inputs. Input start and end using prompt() print all between.
+
+
+{
+  let user1 = +prompt("Enter a number");
+  let user2 = +prompt("Enter a number");
+
+
+  if(user1 > user2){
+    console.error("first input should be smaller then second !");
+  }else{
+      for(let i = user1; i <= user2; i++){
+      console.log(i);
+    }
+  }
+}
