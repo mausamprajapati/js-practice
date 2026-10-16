@@ -513,3 +513,66 @@ for(let i = 10; i >=0; i--){
     }
   }
 }
+
+
+// QUESTION 40. Print only first 3 odd numbers from 1 to 20. use loop. stop with break after 3 odd prints.
+
+
+
+{
+  let count = 0;
+
+  for(let i = 1; i <= 20; i++){
+    
+    if(i % 2 !== 0){
+      count++;
+      console.log(i);
+    }
+
+    if(count === 3){
+      break;
+    } 
+  }
+}
+
+
+// QUESTION 41. Ask user 5 numbers. count how many are positive use loop + condition + counter.
+
+
+{
+  let counter = 0;
+  let user;
+  for(let i = 1; i <= 5; i++){
+    user = +prompt("Enter a number");
+
+    if(user > 0){
+      counter++;
+    }
+  }
+  console.log(`${counter} are positive numbers`);
+}
+
+
+
+// QUESTION 42. ATM simulator - allow 3 withdrawals start with 1000 rupee balance. ask withdrawal amount 3 times. if enough balance - deduct else insufficient balance.
+
+
+
+{
+  let balance = 1000;
+  
+  for(let i = 1; i <= 3; i++){
+    
+    let input = +prompt(`Withdrawal ${i}: Enter amount`);
+
+    if(input > balance){
+      console.error("Insufficient balance");
+    }else {
+      balance = balance - input;
+      console.log(`Withdrawal amount: ${input} Remaining amount: ${balance}`);
+    }
+  }
+  console.log(`Final balance: ${balance}`);
+
+}
+
