@@ -708,3 +708,35 @@ function isPrime(n){
 }
 
 console.log(isPrime(6));
+
+
+// QUESTION 10. Write a function countVowels(str) that counts how many vowels are in a string
+
+function countVowels(str){
+  let count = 0;
+  let vowels = "aeiouAEIOU";
+
+  for(let i = 0; i < str.length; i++){
+    if(vowels.includes(str[i])){
+      count++;
+    }
+  }
+  return count;
+}
+
+console.log(countVowels("hello world"));
+
+
+// QUESTION 11. Write a function sumDigits(n) that returns sum of all digits in a number
+
+function sumDigits(n){
+  let str = String(n);
+  let sum = 0;
+  
+  for(let i = 0; i < str.length; i++){
+    sum = sum + Number(str[i]);
+  }
+  return sum;
+}
+
+console.log(sumDigits(27359));
