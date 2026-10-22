@@ -678,3 +678,33 @@ function repeatString(str, n){
 }
 
 console.log(repeatString("la", 4));
+
+
+// QUESTION 8. Write a function reverseString(str) that reverses a string without using .reverse()
+
+
+function reverseString(str){
+  let result = "";
+  for(let i = str.length -1; i >= 0; i--){
+    result = result + str[i];
+  }
+  return result;
+}
+console.log(reverseString("hello"));
+
+
+
+// QUESTION 9. Write a function isPrime(n) that returns true if a number is prime, false if not.
+
+
+function isPrime(n){
+  if(n <= 1) return `false ${n} is not a prime number`;
+
+  for(let i = 2; i < n; i++){
+    if(n % i === 0) return `false ${n} is not a prime number`;
+  }
+
+  return `true ${n} is a prime number`;
+}
+
+console.log(isPrime(6));
