@@ -835,3 +835,16 @@ function findMax(...val){
 }
 
 console.log(findMax(3,4,9,1,8,5));
+
+
+// QUESTION 18. Write a function that takes an array and returns only the even numbers.
+
+
+function even(...num){
+  let arr = num.filter(function(val){
+    if(val % 2 === 0) return true;
+  })
+  return arr;
+}
+
+console.log(even(3,4,2,5,8));
