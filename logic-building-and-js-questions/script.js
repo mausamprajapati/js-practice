@@ -740,3 +740,66 @@ function sumDigits(n){
 }
 
 console.log(sumDigits(27359));
+
+
+
+// QUESTION 12. Create a function `add(a, b)` that returns their sum and log the result.
+
+
+function add(a, b){
+  let sum = 0;
+  return sum = a + b;
+}
+console.log(add(5,9));
+
+
+
+// QUESTION 13. Write a function with a default parameter `name = "Guest"` that prints `"Hi <name>"`.
+
+
+function greeting(name = "Guest"){
+  return (`Hi ${name}`);
+}
+
+console.log(greeting());
+
+
+// QUESTION 14. Use rest parameters to make a function that adds unlimited numbers.
+
+
+function addUnlimited(...nums){
+  let sum = 0;
+  for(let i = 0; i < nums.length; i++){
+    sum = sum + nums[i];
+  }
+  return sum;
+}
+
+console.log(addUnlimited(1,2,3,4,5,6,7,8));
+
+
+                                      // OR
+
+
+function addUnlimited(...nums){
+  let sum = 0;
+  let ans = nums.forEach(function(val){
+    sum += val;
+  });
+  return sum;
+}
+
+console.log(addUnlimited(1,2,3,4,5,6,7,8));
+
+
+                                    // OR 
+
+function addUnlimited(...nums){
+  let ans = nums.reduce(function(acc, val){
+    return acc += val;
+  },0);
+
+  return ans;
+}
+
+console.log(addUnlimited(1,2,3,4,5,6,7,8));
