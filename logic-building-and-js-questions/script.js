@@ -818,3 +818,20 @@ function capitalize(val){
 }
 
 console.log(capitalize("hello world"));
+
+
+
+// QUESTION 17. Write a function that takes an array of numbers and returns the largest number.
+
+
+function findMax(...val){
+  let max = val[0];
+  for(let i = 1; i < val.length; i++){
+    if(val[i] > max){
+      max = val[i];
+    }
+  }
+  return max;
+}
+
+console.log(findMax(3,4,9,1,8,5));
