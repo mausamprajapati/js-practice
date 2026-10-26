@@ -914,3 +914,26 @@ function doubled(arr){
 }
 
 console.log(doubled([1,2,3]));
+
+
+
+// QUESTION 22. Create an object `person` with keys `name`, `age`, and `city`, and print each key’s value.
+
+
+let person = {
+  name: "Alex",
+  age: 19,
+  city: "Jabalpur"
+}
+
+for(let key in person){
+  console.log(`${key} : ${person[key]}`);
+}
+
+
+// QUESTION 23. Use `setTimeout()` to log `"Time’s up!"` after 2 seconds.
+
+
+setTimeout(() => {
+  console.log("Time's up!");
+},2000);
