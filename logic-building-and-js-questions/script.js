@@ -848,3 +848,16 @@ function even(...num){
 }
 
 console.log(even(3,4,2,5,8));
+
+
+// QUESTION 19. Write a function that takes an array of numbers and returns their sum.
+
+
+function arrSum(...arr){
+  let newArr = arr.reduce(function(acc, val){
+    return acc += val;
+  },0)
+  return newArr
+}
+
+console.log(arrSum(3,4,2,5,8,7));
