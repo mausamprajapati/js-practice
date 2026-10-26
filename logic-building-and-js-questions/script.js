@@ -861,3 +861,56 @@ function arrSum(...arr){
 }
 
 console.log(arrSum(3,4,2,5,8,7));
+
+
+// QUESTION 20. Write a function that takes an array of strings and returns them all in uppercase.
+
+
+function upperCase(val){
+  let str = val.split(" ");
+  for(let i = 0; i < str.length; i++){
+    str[i] = str[i].toUpperCase();
+  }
+  let result = "";
+  for(let i = 0; i < str.length; i++){
+    result = result + str[i];
+    if(i < str.length - 1) result = result + " ";
+  }
+  return result;
+}
+
+console.log(upperCase("hello world"));
+
+
+                    // Or
+
+function upperCase(arr){
+  return arr.map(function(val){
+    return val.toUpperCase();
+  })
+}
+
+console.log(upperCase(["hello", "world"]));
+
+
+
+// QUESTION 21. Write a function that takes an array of numbers and returns a new array with each number doubled.
+
+function doubled(arr){
+  return arr.map(function(val){
+    return val + val;
+  })
+}
+
+console.log(doubled([1,2,3]));
+
+//        or
+
+function doubled(arr){
+  let arr1 = arr.map(function(val){
+    return val + val;
+  })
+  return arr1;
+}
+
+console.log(doubled([1,2,3]));
