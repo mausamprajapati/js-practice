@@ -976,3 +976,52 @@ function salary(arr){
 }
 
 console.log(salary([1000,2000,3000]));
+
+
+
+// QUESTION 27. Create an array of names and use some() and every() to test a condition (e.g., all names longer than 3 characters).
+
+
+let names = ["Alex", "Jo", "Mausam", "Sam", "Ed"];
+
+function hasLongName(arr){
+  return arr.some(function(val){
+    return val.length > 3;
+  })
+}
+
+console.log(hasLongName(names));
+
+
+function allLongNames(arr){
+  return arr.every(function(val){
+    return val.length > 3;
+  })
+}
+
+console.log((allLongNames(names)));
+
+
+
+// QUESTION 28. Create an object user and test the behavior of Object.freeze() and Object.seal() by adding/changing keys.
+
+
+let user = { name: "Mausam", age: 22};
+
+Object.freeze(user);
+
+user.name = "Alex";
+user.city = "jabalpur";
+delete user.age;
+
+console.log(user);
+
+let users = { name: "Mausam", age: 22};
+
+Object.seal(users);
+
+users.name = "Alex";
+users.city = "jabalpur";
+delete users.age;
+
+console.log(users);
