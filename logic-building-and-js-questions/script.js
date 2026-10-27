@@ -937,3 +937,42 @@ for(let key in person){
 setTimeout(() => {
   console.log("Time's up!");
 },2000);
+
+
+// QUESTION 24. Given an array of numbers, use map() to create a new array where each number is squared.
+
+
+let arr = [1,2,3,4,5,6];
+
+function squared(arr){
+  return arr.map(function(val){
+    return val * val;
+  })
+}
+ console.log(squared(arr));
+
+
+// QUESTION 25. Use filter() to get only even numbers from an array.
+
+function evenNumber(arr){
+  let arr1 = arr.filter(function(val){
+    if(val % 2 ===0) return true;
+  })
+  return arr1;
+}
+
+console.log(evenNumber(arr));
+
+
+
+// QUESTION 26. Use reduce() to find the total salary from an array of numbers [1000, 2000, 3000].
+
+
+function salary(arr){
+  let arr1 = arr.reduce(function(acc, val){
+    return acc + val;
+  },0)
+  return arr1;
+}
+
+console.log(salary([1000,2000,3000]));
